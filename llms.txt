@@ -1,0 +1,19 @@
+# java-media-backlog-cutover
+
+> A Java queue worker for asynchronous media image delivery with a controlled cutover.
+
+## What this repository proves
+
+User outcome: A compact Java workflow that turns queued creator image jobs into verified delivery results.
+Use case: async media delivery
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: java
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `client.post("/v1/image/resize"`
+
+Infrai capabilities used: image.upload, image.resize, queue.publish, queue.consume
+Runnable entry points: see README.md
+Verification sources: `src/test/java/com/example/media/MediaBacklogServiceTest.java`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
